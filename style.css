@@ -1,0 +1,106 @@
+/* Import Playfair Display (serif for titles) and Poppins (sans-serif for body) from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap');
+
+/* --- Global Styles --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+/* --- Main App Container --- */
+.stApp {
+    background-color: #F8F6F1;
+}
+
+/* --- Main Content Panel (Center Column) --- */
+[data-testid="stAppViewContainer"] > .main .block-container {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 2rem 3rem;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Title Styling --- */
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: #2E2520 !important;
+    text-align: center;
+}
+h3 {
+    text-align: center;
+    font-weight: 400;
+    color: #5a504a !important;
+    padding-bottom: 1.5rem;
+}
+
+/* --- Button Styling --- */
+div[data-testid="stButton"] {
+    display: flex;
+    justify-content: center;
+}
+.stButton>button {
+    border: none;
+    background-color: #BFA181;
+    color: #FFFFFF;
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+.stButton>button:hover {
+    background-color: #A98C70;
+    transform: translateY(-2px);
+}
+
+/* --- Text Input Area --- */
+.stTextArea textarea {
+    background-color: #F8F6F1;
+    border: 1px solid #DCDCDC;
+    border-radius: 10px;
+    color: #2E2520;
+    caret-color: #BFA181;
+}
+.stTextArea textarea::placeholder {
+    color: #999999;
+}
+
+/* --- Result Boxes (Success/Error) --- */
+.stAlert {
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* --- Scrolling Image Column Styles --- */
+.scrolling-column {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.image-track-up {
+    display: flex;
+    flex-direction: column;
+    animation: scroll-up 30s linear infinite;
+}
+.image-track-down {
+    display: flex;
+    flex-direction: column;
+    animation: scroll-down 30s linear infinite;
+}
+.scrolling-column img {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 20px;
+}
+@keyframes scroll-up {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); }
+}
+@keyframes scroll-down {
+    from { transform: translateY(-50%); }
+    to { transform: translateY(0); }
+}

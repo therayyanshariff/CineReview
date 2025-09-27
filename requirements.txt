@@ -1,0 +1,6 @@
+nltk
+numpy
+pandas
+Pillow
+scikit-learn
+streamlit
