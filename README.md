@@ -23,7 +23,7 @@ A web application built with Streamlit that uses a machine learning model to per
 
 1.  **Clone the repository:**
     ```bash
-    git clone [your_github_repository_url]
+    git clone https://github.com/therayyanshariff/CineReview.git
     cd cinereview-app
     ```
 
